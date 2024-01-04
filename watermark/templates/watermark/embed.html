@@ -1,0 +1,26 @@
+<!-- watermark/templates/watermark/embed.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" src="{% static 'css/global.css' %}" />
+    <title>Watermark Embedding Result</title>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <h1>Watermark Embedding and Extraction</h1>
+    </div>
+    <!-- <div class="top-bar"><h1>Watermark Embedding Result</h1></div> -->
+
+    <div class="content">
+      <img src="{% static watermarked_image_path %}" alt="Watermarked Image" />
+
+      <a href="{% url 'watermark:home' %}" style="border: 5px"
+        >Go back to Home</a
+      >
+    </div>
+  </body>
+</html>

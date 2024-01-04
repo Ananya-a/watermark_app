@@ -1,0 +1,25 @@
+/* watermark/static/css/global.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Choose a font you like */
+  }
+  
+  h1 {
+    font-size: 28px; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add spacing below the h1 heading */
+  }
+  
+  label {
+    display: block; /* Make labels block-level for better spacing */
+    margin-bottom: 8px; /* Add spacing below each label */
+  }
+  
+  input {
+    margin-bottom: 12px; /* Add spacing below each input field */
+  }
+  
+  button {
+    font-size: 16px; /* Adjust the font size of the button */
+    padding: 10px 15px; /* Add padding to the button for better appearance */
+  }
+  

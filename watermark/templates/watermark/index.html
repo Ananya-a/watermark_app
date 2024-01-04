@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watermark Embedding and Extraction</title>
+  </head>
+  <body>
+    <h1>Watermark Embedding and Extraction (LEVEL 1)</h1>
+
+    <form
+      action="{% url 'embed_extract' %}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <label for="host_image">Host Image:</label>
+      <input
+        type="file"
+        name="host_image"
+        accept=".png, .jpg, .jpeg"
+        required
+      />
+      <br />
+      <label for="watermark_image">Watermark Image:</label>
+      <input
+        type="file"
+        name="watermark_image"
+        accept=".png, .jpg, .jpeg"
+        required
+      />
+      <br />
+      <button type="submit">Embed/Extract Watermark</button>
+    </form>
+
+    <!-- {% if result_image %}
+    <h2>Result Image (Extracted):</h2>
+    <img src="{{ result_image }}" alt="Result Image" />
+    {% endif %} -->
+
+    {% if watermarked_image_url %}
+    <h2>Watermarked Image:</h2>
+    <img src="{{ watermarked_image_url }}" alt="Watermarked Image" />
+    {% endif %} {% if extracted_image_url %}
+    <h2>Extracted Watermark Image:</h2>
+    <img src="{{ extracted_image_url }}" alt="Extracted Watermark Image" />
+    {% endif %}
+  </body>
+</html>
